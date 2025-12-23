@@ -7,7 +7,7 @@ function PostCreate() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    axios.post("http://localhost:3000/posts", {
+    axios.post("http://localhost:3005/posts", {
       title,
     });
 
