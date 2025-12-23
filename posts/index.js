@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
+// * create a list of posts *//
 const posts = {};
 
 app.get("/posts", (req, res) => {
