@@ -44,5 +44,6 @@ app.post("/events", (req, res) => {
 
 // start server
 app.listen(3005, () => {
+  console.log("v20");
   console.log("Server is running on http://localhost:3005");
 });
