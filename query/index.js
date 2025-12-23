@@ -31,6 +31,7 @@ app.post("/events", (req, res) => {
   res.send({ status: "OK" });
 });
 
-app.listen(6005, () => {
-  console.log("Query service running on http://localhost:6005");
+app.listen(4002, () => {
+  console.log("Query service running on http://localhost:4002");
 });
+1
