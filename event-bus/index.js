@@ -6,8 +6,13 @@ const app = express();
 app.use(bodyParser.json());
 const PORT = 4005;
 
+const events = [];
+
 app.post("/events", async (req, res) => {
   const event = req.body;
+
+  events.push(event);
+
   axios.post("http://localhost:3005/events", event).catch((err) => {
     console.log("Error forwarding event to posts service:", err.message);
   });
@@ -23,6 +28,10 @@ app.post("/events", async (req, res) => {
   });
 
   res.send({ status: "OK" });
+});
+
+app.get("/events", (req, res) => {
+  res.send(events);
 });
 
 app.listen(PORT, () => {
